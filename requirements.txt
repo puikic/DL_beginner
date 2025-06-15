@@ -1,0 +1,8 @@
+numpy
+torch
+pandas
+matplotlib
+sympy
+tqdm
+scikit-learn
+opencv-python
