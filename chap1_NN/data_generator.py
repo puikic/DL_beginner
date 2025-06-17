@@ -1,6 +1,7 @@
 import numpy as np
 
-#生成回归用数据
+# 该函数生成符合以下线性关系的数据集：
+# y = (x₁ * w₁ + x₂ * w₂ + ... + xₖ * wₖ) + b
 def generateData(Ws,b=0,n=128):
     '''
     :param Ws: [1,2] 给定包含所有权重w的列表
