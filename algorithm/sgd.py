@@ -39,10 +39,10 @@ for epoch in range(epochs):
         loss = np.mean((y - y_preds) ** 2)
         print(f"Epoch {epoch}: Loss={loss:.4f}, w={w:.4f}, b={b:.4f}")
 
-print(f"\n训练完成：w={w:.4f}, b={b:.4f}")
+print(f"\ntraining completed：w={w:.4f}, b={b:.4f}")
 
 # 可视化结果
-plt.scatter(x, y, color='blue', label='真实数据')
-plt.plot(x, w * x + b, color='red', label='拟合线')
+plt.scatter(x, y, color='blue', label='real data')
+plt.plot(x, w * x + b, color='red', label='fit line')
 plt.legend()
 plt.show()

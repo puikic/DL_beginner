@@ -27,3 +27,13 @@ if __name__ == '__main__':
     print(a, a.shape)
     a = np.array([[1], [2]])
     print(a, a.shape)
+
+    arr = np.array([1, 2, 3, 4])  # 形状 (4,) 一维
+    # 转换为列向量（二维）,。参数 -1 表示 NumPy 自动计算该维度的大小，而 1 表示新数组的列数为 1。
+    reshaped = arr.reshape(-1, 1)
+    print("原数组形状:", arr.shape)
+    print("新数组形状:", reshaped.shape)
+    print("新数组内容:\n", reshaped)
+    reshaped = arr.reshape(1, -1)
+    print("新数组形状:", reshaped.shape)
+    print("新数组内容:\n", reshaped)

@@ -1,19 +1,19 @@
 import random
 import data_generator
 
-def getDatas():
+def getdata():
     Ws=[2,3]
     b=2
     n=128
-    datas = data_generator.generateData(Ws,b,n)
-    return datas
+    data = data_generator.generateData(Ws,b,n)
+    return data
 
-def train(datas, lr=0.1, epochs=5):
-    w_number = len(datas[0])-1
+def train(data, lr=0.1, epochs=5):
+    w_number = len(data[0])-1
     Ws = [random.random() for _ in range(w_number)]
     b = random.random()
     for e in range(epochs):
-        for d in datas:
+        for d in data:
             x = d[:-1]
             y_pred = sum(x*Ws)+b
             dis = y_pred - d[-1]
@@ -23,5 +23,5 @@ def train(datas, lr=0.1, epochs=5):
     print(b)
 
 if __name__ == '__main__':
-    datas = getDatas()
-    train(datas)
+    data = getdata()
+    train(data)

@@ -14,3 +14,8 @@ def generateData(Ws,b=0,n=128):
     datas = np.column_stack((x, y))
     datas = datas.astype(np.float32)
     return datas
+
+if __name__=='__main__':
+    Ws = [2,3,4]
+    data = generateData(Ws)
+    print(data,type(data))
