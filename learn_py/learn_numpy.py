@@ -1,7 +1,6 @@
 import numpy as np
 
 
-
 if __name__ == '__main__':
     a = np.array([1, 2])
     print(a, a.shape)  # NumPy会根据你的运算自动把它作为行向量或列向量对待。
@@ -37,3 +36,6 @@ if __name__ == '__main__':
     reshaped = arr.reshape(1, -1)
     print("新数组形状:", reshaped.shape)
     print("新数组内容:\n", reshaped)
+
+    ns = np.random.random(5)  # 生成5个随机数，shape是一维向量(5,)
+    print(ns, type(ns), ns.shape)
